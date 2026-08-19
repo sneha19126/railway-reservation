@@ -1,2 +1,50 @@
-# railway reservation 
-# Railway Reservation System  A simple Railway Reservation System developed using C++ and MySQL. This project is designed to manage passengers, trains, stations, and ticket reservations through a command-line interface.  ## Technologies Used  * C++ * MySQL * MySQL Connector/C++ * MySQL Workbench  ## Features  * Add and search passenger details * View available trains * View railway stations * Book tickets * View reservations * Cancel tickets * Store and manage data using MySQL  ## Database Tables  The project uses the following main tables:  * Passenger * Train * Station * Train_Schedule * Reservation  ## How to Run  1. Install MySQL Server and MySQL Connector/C++. 2. Open the SQL file in MySQL Workbench and execute it. 3. Configure the database name, username, and password in `reservation.cpp`. 4. Compile the C++ program with MySQL Connector/C++. 5. Run the generated executable.  Make sure not to upload your actual database password to GitHub.  ## Project Purpose  The main purpose of this project is to understand C++ programming, SQL database management, database design, and the integration of C++ with MySQL.  ## Author  Sneha Rathore  This project was developed for educational purposes.
+# Railway Reservation System
+
+A simple Railway Reservation System developed using C++ and MySQL. This project is designed to manage passengers, trains, stations, and ticket reservations through a command-line interface.
+
+## Technologies Used
+
+* C++
+* MySQL
+* MySQL Connector/C++
+* MySQL Workbench
+
+## Features
+
+* Add and search passenger details
+* View available trains
+* View railway stations
+* Book tickets
+* View reservations
+* Cancel tickets
+* Store and manage data using MySQL
+
+## Database Tables
+
+The project uses the following main tables:
+
+* Passenger
+* Train
+* Station
+* Train_Schedule
+* Reservation
+
+## How to Run
+
+1. Install MySQL Server and MySQL Connector/C++.
+2. Open the SQL file in MySQL Workbench and execute it.
+3. Configure the database name, username, and password in `reservation.cpp`.
+4. Compile the C++ program with MySQL Connector/C++.
+5. Run the generated executable.
+
+Make sure not to upload your actual database password to GitHub.
+
+## Project Purpose
+
+The main purpose of this project is to understand C++ programming, SQL database management, database design, and the integration of C++ with MySQL.
+
+## Author
+
+Sneha Rathore
+
+This project was developed for educational purposes.
