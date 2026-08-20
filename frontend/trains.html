@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Available Trains - RailReserve</title>
+
+    <link rel="stylesheet" href="frontend/css/trains.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🚆 RailReserve
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#search">
+                    Search Trains
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Page Heading -->
+    <section class="page-heading">
+
+        <h1>Available Trains</h1>
+
+        <p>
+            Select a train for your journey
+        </p>
+
+    </section>
+
+
+    <!-- Search Summary -->
+    <section class="search-summary">
+
+        <div class="route">
+
+            <span id="fromStation">
+                Lucknow
+            </span>
+
+            <span class="arrow">
+                →
+            </span>
+
+            <span id="toStation">
+                New Delhi
+            </span>
+
+        </div>
+
+        <div class="journey-date">
+
+            Journey Date:
+            <strong id="journeyDate">
+                25 August 2026
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- Train List -->
+    <main class="train-container">
+
+
+        <!-- Train Card 1 -->
+        <div class="train-card">
+
+            <div class="train-header">
+
+                <div>
+
+                    <h2>
+                        🚆 Lucknow Mail
+                    </h2>
+
+                    <p class="train-number">
+                        Train No: 12230
+                    </p>
+
+                </div>
+
+                <span class="train-type">
+                    Express
+                </span>
+
+            </div>
+
+
+            <div class="journey-details">
+
+                <div class="station">
+
+                    <h3>
+                        10:00 PM
+                    </h3>
+
+                    <p>
+                        Lucknow
+                    </p>
+
+                </div>
+
+
+                <div class="journey-line">
+
+                    <span>
+                        8h 30m
+                    </span>
+
+                    <div class="line"></div>
+
+                    <span>
+                        Direct
+                    </span>
+
+                </div>
+
+
+                <div class="station">
+
+                    <h3>
+                        06:30 AM
+                    </h3>
+
+                    <p>
+                        New Delhi
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="train-footer">
+
+                <div class="fare">
+
+                    <span>
+                        Starting from
+                    </span>
+
+                    <strong>
+                        ₹450
+                    </strong>
+
+                </div>
+
+                <button
+                    class="book-btn"
+                    onclick="bookTrain('12230', 'Lucknow Mail')"
+                >
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Train Card 2 -->
+        <div class="train-card">
+
+            <div class="train-header">
+
+                <div>
+
+                    <h2>
+                        🚆 Shatabdi Express
+                    </h2>
+
+                    <p class="train-number">
+                        Train No: 12004
+                    </p>
+
+                </div>
+
+                <span class="train-type">
+                    Superfast
+                </span>
+
+            </div>
+
+
+            <div class="journey-details">
+
+                <div class="station">
+
+                    <h3>
+                        06:10 AM
+                    </h3>
+
+                    <p>
+                        Lucknow
+                    </p>
+
+                </div>
+
+
+                <div class="journey-line">
+
+                    <span>
+                        6h 45m
+                    </span>
+
+                    <div class="line"></div>
+
+                    <span>
+                        Direct
+                    </span>
+
+                </div>
+
+
+                <div class="station">
+
+                    <h3>
+                        12:55 PM
+                    </h3>
+
+                    <p>
+                        New Delhi
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="train-footer">
+
+                <div class="fare">
+
+                    <span>
+                        Starting from
+                    </span>
+
+                    <strong>
+                        ₹750
+                    </strong>
+
+                </div>
+
+                <button
+                    class="book-btn"
+                    onclick="bookTrain('12004', 'Shatabdi Express')"
+                >
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Train Card 3 -->
+        <div class="train-card">
+
+            <div class="train-header">
+
+                <div>
+
+                    <h2>
+                        🚆 Awadh Express
+                    </h2>
+
+                    <p class="train-number">
+                        Train No: 12556
+                    </p>
+
+                </div>
+
+                <span class="train-type">
+                    Express
+                </span>
+
+            </div>
+
+
+            <div class="journey-details">
+
+                <div class="station">
+
+                    <h3>
+                        04:30 PM
+                    </h3>
+
+                    <p>
+                        Lucknow
+                    </p>
+
+                </div>
+
+
+                <div class="journey-line">
+
+                    <span>
+                        9h 10m
+                    </span>
+
+                    <div class="line"></div>
+
+                    <span>
+                        Direct
+                    </span>
+
+                </div>
+
+
+                <div class="station">
+
+                    <h3>
+                        01:40 AM
+                    </h3>
+
+                    <p>
+                        New Delhi
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="train-footer">
+
+                <div class="fare">
+
+                    <span>
+                        Starting from
+                    </span>
+
+                    <strong>
+                        ₹520
+                    </strong>
+
+                </div>
+
+                <button
+                    class="book-btn"
+                    onclick="bookTrain('12556', 'Awadh Express')"
+                >
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 RailReserve. All Rights Reserved.
+        </p>
+
+        <p>
+            Railway Reservation System
+        </p>
+
+    </footer>
+
+
+    <script src="frontend/js/trains.js"></script>
+
+</body>
+
+</html>
