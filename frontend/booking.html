@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Book Ticket - RailReserve</title>
+
+      <link rel="stylesheet" href="frontend/css/booking.css">
+  </head>
+
+  <body>
+
+      <!-- Navigation -->
+      <header>
+
+          <nav class="navbar">
+
+              <div class="logo">
+                  🚆 RailReserve
+              </div>
+
+              <div class="nav-links">
+
+                  <a href="index.html">Home</a>
+
+                  <a href="trains.html">Trains</a>
+
+                  <a href="login.html">Login</a>
+
+              </div>
+
+          </nav>
+
+      </header>
+
+
+      <!-- Page Heading -->
+      <section class="page-heading">
+
+          <h1>Book Your Ticket</h1>
+
+          <p>Enter passenger details to continue</p>
+
+      </section>
+
+
+      <!-- Main Booking Section -->
+      <main class="booking-container">
+
+
+          <!-- Selected Train -->
+          <section class="train-summary">
+
+              <div class="summary-header">
+
+                  <div>
+                      <h2 id="trainName">
+                          Train
+                      </h2>
+
+                      <p id="trainNumber">
+                          Train Number
+                      </p>
+                  </div>
+
+                  <span class="train-type">
+                      Express
+                  </span>
+
+              </div>
+
+
+              <div class="route-details">
+
+                  <div class="station">
+
+                      <span class="time" id="departureTime">
+                          --
+                      </span>
+
+                      <span class="station-name" id="fromStation">
+                          --
+                      </span>
+
+                  </div>
+
+
+                  <div class="route-line">
+
+                      <span>Direct</span>
+
+                      <div></div>
+
+                  </div>
+
+
+                  <div class="station">
+
+                      <span class="time" id="arrivalTime">
+                          --
+                      </span>
+
+                      <span class="station-name" id="toStation">
+                          --
+                      </span>
+
+                  </div>
+
+              </div>
+
+
+              <div class="journey-info">
+
+                  <div>
+                      <span>Journey Date</span>
+                      <strong id="journeyDate">--</strong>
+                  </div>
+
+                  <div>
+                      <span>Passengers</span>
+                      <strong id="passengerCount">1</strong>
+                  </div>
+
+                  <div>
+                      <span>Starting Fare</span>
+                      <strong id="fare">₹450</strong>
+                  </div>
+
+              </div>
+
+          </section>
+
+
+          <!-- Passenger Details -->
+          <section class="passenger-section">
+
+              <h2>Passenger Details</h2>
+
+              <p class="section-description">
+                  Please enter the details of the passenger.
+              </p>
+
+
+              <form id="bookingForm">
+
+
+                  <!-- Full Name -->
+                  <div class="form-group">
+
+                      <label for="passengerName">
+                          Full Name
+                      </label>
+
+                      <input
+                          type="text"
+                          id="passengerName"
+                          name="passengerName"
+                          placeholder="Enter passenger name"
+                          required
+                      >
+
+                  </div>
+
+
+                  <!-- Age -->
+                  <div class="form-group">
+
+                      <label for="age">
+                          Age
+                      </label>
+
+                      <input
+                          type="number"
+                          id="age"
+                          name="age"
+                          placeholder="Enter age"
+                          min="1"
+                          max="120"
+                          required
+                      >
+
+                  </div>
+
+
+                  <!-- Gender -->
+                  <div class="form-group">
+
+                      <label for="gender">
+                          Gender
+                      </label>
+
+                      <select
+                          id="gender"
+                          name="gender"
+                          required
+                      >
+
+                          <option value="">
+                              Select Gender
+                          </option>
+
+                          <option value="Male">
+                              Male
+                          </option>
+
+                          <option value="Female">
+                              Female
+                          </option>
+
+                          <option value="Other">
+                              Other
+                          </option>
+
+                      </select>
+
+                  </div>
+
+
+                  <!-- Phone -->
+                  <div class="form-group">
+
+                      <label for="phone">
+                          Phone Number
+                      </label>
+
+                      <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          placeholder="Enter 10-digit phone number"
+                          maxlength="10"
+                          required
+                      >
+
+                  </div>
+
+
+                  <!-- Email -->
+                  <div class="form-group">
+
+                      <label for="email">
+                          Email Address
+                      </label>
+
+                      <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="Enter email address"
+                          required
+                      >
+
+                  </div>
+
+
+                  <!-- Class -->
+                  <div class="form-group">
+
+                      <label for="travelClass">
+                          Travel Class
+                      </label>
+
+                      <select
+                          id="travelClass"
+                          name="travelClass"
+                          required
+                      >
+
+                          <option value="">
+                              Select Class
+                          </option>
+
+                          <option value="Sleeper">
+                              Sleeper
+                          </option>
+
+                          <option value="AC 3 Tier">
+                              AC 3 Tier
+                          </option>
+
+                          <option value="AC 2 Tier">
+                              AC 2 Tier
+                          </option>
+
+                          <option value="AC First Class">
+                              AC First Class
+                          </option>
+
+                      </select>
+
+                  </div>
+
+
+                  <!-- Submit -->
+                  <button
+                      type="submit"
+                      class="confirm-btn"
+                  >
+                      Continue to Confirmation
+                  </button>
+
+              </form>
+
+          </section>
+
+      </main>
+
+
+      <!-- Footer -->
+      <footer>
+
+          <p>
+              © 2026 RailReserve. All Rights Reserved.
+          </p>
+
+          <p>
+              Railway Reservation System
+          </p>
+
+      </footer>
+
+
+      <script src="frontend/js/booking.js"></script>
+
+  </body>
+
+</html>
