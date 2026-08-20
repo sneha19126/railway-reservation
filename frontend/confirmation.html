@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Booking Confirmation - RailReserve</title>
+
+      <link rel="stylesheet" href="frontend/css/confirmation.css">
+  </head>
+
+  <body>
+
+      <header>
+
+          <nav class="navbar">
+
+              <div class="logo">
+                  🚆 RailReserve
+              </div>
+
+              <div class="nav-links">
+
+                  <a href="index.html">Home</a>
+
+                  <a href="trains.html">Trains</a>
+
+              </div>
+
+          </nav>
+
+      </header>
+
+
+      <main class="confirmation-page">
+
+          <div class="confirmation-card">
+
+              <div class="success-icon">
+                  ✓
+              </div>
+
+              <h1>Booking Confirmed!</h1>
+
+              <p class="success-message">
+                  Your railway ticket has been successfully booked.
+              </p>
+
+
+              <div class="pnr-section">
+
+                  <span>PNR Number</span>
+
+                  <strong id="pnrNumber">
+                      RR000000
+                  </strong>
+
+              </div>
+
+
+              <div class="booking-details">
+
+                  <h2>Booking Details</h2>
+
+
+                  <div class="detail-row">
+
+                      <span>Passenger Name</span>
+
+                      <strong id="passengerName">
+                          --
+                      </strong>
+
+                  </div>
+
+
+                  <div class="detail-row">
+
+                      <span>Train</span>
+
+                      <strong id="trainName">
+                          --
+                      </strong>
+
+                  </div>
+
+
+                  <div class="detail-row">
+
+                      <span>Train Number</span>
+
+                      <strong id="trainNumber">
+                          --
+                      </strong>
+
+                  </div>
+
+
+                  <div class="detail-row">
+
+                      <span>Journey</span>
+
+                      <strong>
+                          <span id="fromStation">--</span>
+                          →
+                          <span id="toStation">--</span>
+                      </strong>
+
+                  </div>
+
+
+                  <div class="detail-row">
+
+                      <span>Journey Date</span>
+
+                      <strong id="journeyDate">
+                          --
+                      </strong>
+
+                  </div>
+
+
+                  <div class="detail-row">
+
+                      <span>Travel Class</span>
+
+                      <strong id="travelClass">
+                          --
+                      </strong>
+
+                  </div>
+
+
+                  <div class="detail-row">
+
+                      <span>Passengers</span>
+
+                      <strong id="passengers">
+                          --
+                      </strong>
+
+                  </div>
+
+              </div>
+
+
+              <div class="confirmation-actions">
+
+                  <button
+                      onclick="window.print()"
+                      class="print-btn"
+                  >
+                      🖨 Print Ticket
+                  </button>
+
+                  <a
+                      href="index.html"
+                      class="home-btn"
+                  >
+                      Back to Home
+                  </a>
+
+              </div>
+
+          </div>
+
+      </main>
+
+
+      <footer>
+
+          <p>
+              © 2026 RailReserve. All Rights Reserved.
+          </p>
+
+      </footer>
+
+
+      <script src="frontend/js/confirmation.js"></script>
+
+  </body>
+
+</html>
