@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Railway Reservation System</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="logo">
+        🚆 Railway Reservation
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#trains">Trains</a>
+
+        <a href="#passenger">Passenger</a>
+
+        <a href="#booking">Book Ticket</a>
+
+        <a href="#reservations">Reservations</a>
+
+        <a href="#stations">Stations</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Railway Reservation System
+        </h1>
+
+        <p>
+            Search trains, manage passengers
+            and book your journey easily.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button
+                onclick="showSection('trains')"
+            >
+                View Trains
+            </button>
+
+            <button
+                onclick="showSection('booking')"
+                class="secondary"
+            >
+                Book Ticket
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DASHBOARD
+========================================================= -->
+
+<section class="dashboard">
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🚆
+        </div>
+
+        <h3>
+            Trains
+        </h3>
+
+        <p id="trainCount">
+            --
+        </p>
+
+        <span>
+            Available Trains
+        </span>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            👤
+        </div>
+
+        <h3>
+            Passengers
+        </h3>
+
+        <p id="passengerCount">
+            --
+        </p>
+
+        <span>
+            Registered Passengers
+        </span>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🎫
+        </div>
+
+        <h3>
+            Reservations
+        </h3>
+
+        <p id="reservationCount">
+            --
+        </p>
+
+        <span>
+            Total Bookings
+        </span>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="card-icon">
+            🚉
+        </div>
+
+        <h3>
+            Stations
+        </h3>
+
+        <p id="stationCount">
+            --
+        </p>
+
+        <span>
+            Railway Stations
+        </span>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     TRAINS
+========================================================= -->
+
+<section
+    id="trains"
+    class="content-section"
+>
+
+    <div class="section-title">
+
+        <h2>
+            Available Trains
+        </h2>
+
+        <p>
+            Find trains available in the railway system.
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="trainSearch"
+            placeholder="Search train..."
+            onkeyup="filterTrains()"
+        >
+
+    </div>
+
+
+    <div
+        id="trainsContainer"
+        class="table-container"
+    >
+
+        <p class="loading">
+            Loading trains...
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PASSENGER
+========================================================= -->
+
+<section
+    id="passenger"
+    class="content-section"
+>
+
+    <div class="section-title">
+
+        <h2>
+            Add Passenger
+        </h2>
+
+        <p>
+            Register a passenger before booking a ticket.
+        </p>
+
+    </div>
+
+
+    <form id="passengerForm">
+
+
+        <div class="form-grid">
+
+
+            <div class="form-group">
+
+                <label>
+                    Passenger Name
+                </label>
+
+                <input
+                    type="text"
+                    id="passengerName"
+                    placeholder="Enter full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Age
+                </label>
+
+                <input
+                    type="number"
+                    id="passengerAge"
+                    placeholder="Enter age"
+                    min="1"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Gender
+                </label>
+
+                <select
+                    id="passengerGender"
+                    required
+                >
+
+                    <option value="">
+                        Select gender
+                    </option>
+
+                    <option value="Male">
+                        Male
+                    </option>
+
+                    <option value="Female">
+                        Female
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="passengerPhone"
+                    placeholder="Enter phone number"
+                    required
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <button type="submit">
+            Add Passenger
+        </button>
+
+
+    </form>
+
+
+    <div id="passengerMessage"></div>
+
+
+</section>
+
+
+<!-- =========================================================
+     BOOKING
+========================================================= -->
+
+<section
+    id="booking"
+    class="content-section"
+>
+
+
+    <div class="section-title">
+
+        <h2>
+            Book Your Ticket
+        </h2>
+
+        <p>
+            Enter your journey details below.
+        </p>
+
+    </div>
+
+
+    <form id="bookingForm">
+
+
+        <div class="form-grid">
+
+
+            <div class="form-group">
+
+                <label>
+                    Passenger ID
+                </label>
+
+                <input
+                    type="number"
+                    id="bookingPassengerId"
+                    placeholder="Enter passenger ID"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Train ID
+                </label>
+
+                <input
+                    type="number"
+                    id="bookingTrainId"
+                    placeholder="Enter train ID"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Source Station
+                </label>
+
+                <input
+                    type="text"
+                    id="sourceStation"
+                    placeholder="Enter source station"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Destination Station
+                </label>
+
+                <input
+                    type="text"
+                    id="destinationStation"
+                    placeholder="Enter destination station"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Journey Date
+                </label>
+
+                <input
+                    type="date"
+                    id="journeyDate"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Class
+                </label>
+
+                <select
+                    id="travelClass"
+                    required
+                >
+
+                    <option value="">
+                        Select class
+                    </option>
+
+                    <option value="Sleeper">
+                        Sleeper
+                    </option>
+
+                    <option value="AC 3 Tier">
+                        AC 3 Tier
+                    </option>
+
+                    <option value="AC 2 Tier">
+                        AC 2 Tier
+                    </option>
+
+                    <option value="AC First Class">
+                        AC First Class
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+        <button type="submit">
+            Book Ticket
+        </button>
+
+
+    </form>
+
+
+    <div id="bookingMessage"></div>
+
+
+</section>
+
+
+<!-- =========================================================
+     RESERVATIONS
+========================================================= -->
+
+<section
+    id="reservations"
+    class="content-section"
+>
+
+
+    <div class="section-title">
+
+        <h2>
+            Reservations
+        </h2>
+
+        <p>
+            View and manage current reservations.
+        </p>
+
+    </div>
+
+
+    <div
+        id="reservationsContainer"
+        class="table-container"
+    >
+
+        <p class="loading">
+            Loading reservations...
+        </p>
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     SEARCH PASSENGER
+========================================================= -->
+
+<section
+    id="search"
+    class="content-section"
+>
+
+
+    <div class="section-title">
+
+        <h2>
+            Search Passenger
+        </h2>
+
+        <p>
+            Find a passenger using their ID.
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="number"
+            id="searchPassengerId"
+            placeholder="Enter passenger ID"
+        >
+
+        <button onclick="searchPassenger()">
+            Search
+        </button>
+
+    </div>
+
+
+    <div id="passengerResult"></div>
+
+
+</section>
+
+
+<!-- =========================================================
+     STATIONS
+========================================================= -->
+
+<section
+    id="stations"
+    class="content-section"
+>
+
+
+    <div class="section-title">
+
+        <h2>
+            Railway Stations
+        </h2>
+
+        <p>
+            View stations available in the system.
+        </p>
+
+    </div>
+
+
+    <div
+        id="stationsContainer"
+        class="table-container"
+    >
+
+        <p class="loading">
+            Loading stations...
+        </p>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <p>
+        © 2026 Railway Reservation System
+    </p>
+
+    <p>
+        Developed by Vishal Chaudhary
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
